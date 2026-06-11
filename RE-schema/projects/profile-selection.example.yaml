@@ -1,0 +1,38 @@
+# SPDX-License-Identifier: Apache-2.0
+# Copyright (c) 2026 David303ttl
+
+# Machine-readable companion to `projects/<project>/profile-selection.md`
+# Copy this file into a project-specific location and replace placeholders.
+
+project: [project-name]
+manifest_id: RE-MANIFEST-[PROJECT]-01
+status: active
+
+masters:
+  stage1:
+    schema: RE-STAGE1-EMBEDDED-SYNTH-MASTER
+    version: "6.0"
+    path: ../RE-STAGE1-EMBEDDED-SYNTH-MASTER.md
+  stage2:
+    schema: RE-STAGE2-QUALITY-AUDIT-MASTER
+    version: "1.0"
+    path: ../RE-STAGE2-QUALITY-AUDIT-MASTER.md
+
+profiles:
+  architecture:
+    - file: subtractive-profile.md
+      required: true
+      reason: ""
+  project:
+    - file: lxr-overlay.md
+      required: true
+      reason: ""
+  future_work:
+    - file: refactor-readiness.md
+      enabled: false
+      reason: ""
+
+non_applicable_profiles: []
+conflict_resolution: []
+
+
